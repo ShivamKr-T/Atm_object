@@ -5,7 +5,17 @@ class Atm:
         self.__pin=""
         self.__balance=0
         
-        self.menu()
+        self.__menu()
+
+    def get_pin(self):
+        return self.__pin
+
+    def set_pin(self,new):
+        if type(new)==str:
+            self.__pin=new
+            print("PIN changed")
+        else:
+            print("Not allowed")
         
     def __menu(self):
         user_input=int(input("""
